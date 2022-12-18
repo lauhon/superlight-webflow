@@ -40,6 +40,8 @@ jobs:
             ./api/dist
             ./api/node_modules
             ./api/package.json
+            ./api/tsconfig.json
+            ./api/yarn.lock
 
   deploy:
     runs-on: ubuntu-latest
