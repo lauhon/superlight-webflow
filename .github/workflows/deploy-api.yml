@@ -36,7 +36,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: superlight-webflow-api
-          path: ./api/
+          path: |
+            ./api/dist
+            ./api/node_modules
+            ./api/package.json
 
   deploy:
     runs-on: ubuntu-latest
