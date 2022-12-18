@@ -1,5 +1,5 @@
-import { fetch } from "undici/types/fetch";
 import config from "../config";
+import fetch from "../types/fetch";
 import { MailjetError } from "../types/mailjet";
 
 export const addContact = async (
