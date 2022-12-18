@@ -37,8 +37,7 @@ jobs:
         with:
           name: superlight-webflow-api
           path: |
-            ./api/dist
-            ./api/node_modules
+            ./api/src
             ./api/package.json
             ./api/tsconfig.json
             ./api/yarn.lock
