@@ -1,0 +1,18 @@
+{
+  "name": "superlight-webflow",
+  "version": "1.0.0",
+  "description": "Superlight Webflow Project",
+  "scripts": {
+    "web": "cd web/ && npx browser-sync start --server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauhon/superlight-webflow.git"
+  },
+  "author": "Laurenz Honauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lauhon/superlight-webflow/issues"
+  },
+  "homepage": "https://github.com/lauhon/superlight-webflow#readme"
+}
