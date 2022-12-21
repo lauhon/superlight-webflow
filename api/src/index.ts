@@ -3,7 +3,7 @@ import app from "./app";
 import config from "./config";
 
 app.register(cors, {
-  origin: config.validHost,
+  origin: `https://${config.validHost}`,
   methods: ["POST", "GET"],
 });
 

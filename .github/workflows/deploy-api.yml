@@ -23,9 +23,6 @@ jobs:
           cache: "npm"
           cache-dependency-path: ./api/package-lock.json
 
-      - name: List Stuff
-        run: ls .
-
       - name: npm install, build, and test
         working-directory: api
         run: |
