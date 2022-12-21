@@ -21313,15 +21313,17 @@
             listening = true; // Handle form submission for Webflow forms
 
             $doc.on("submit", namespace + " form", function (evt) {
-              console.log(evt, "helloe");
+              console.log(this, "helloe");
+              console.log(getNamespacedParameterId, "helloe");
+              evt.preventDefault();
 
               // {"msg":"ok","code":200}
-              var data = $.data(this, namespace);
+              // var data = $.data(this, namespace);
 
-              if (data.handler) {
-                data.evt = evt;
-                data.handler(data);
-              }
+              // if (data.handler) {
+              //   data.evt = evt;
+              //   data.handler(data);
+              // }
             }); // handle checked ui for custom checkbox and radio button
 
             var CHECKBOX_CLASS_NAME = ".w-checkbox-input";
