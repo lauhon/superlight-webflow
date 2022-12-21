@@ -1,7 +1,7 @@
 import app from "./app";
-const FASTIFY_PORT = Number(process.env.PORT) || 3006;
+import config from "./config";
 
-app.listen(FASTIFY_PORT);
+app.listen({ port: config.port, path: config.host });
 
-console.log(`🚀  Fastify server running on port ${FASTIFY_PORT}`);
+console.log(`🚀  Fastify server running on  ${config.host}:${config.port}`);
 console.log(`Route user: /api/v1/register`);
