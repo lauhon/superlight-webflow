@@ -1,6 +1,7 @@
 {
   "name": "superlight-webflow-backend",
   "description": "Backend for superlight webflow export",
+  "main": "index.ts",
   "scripts": {
     "watch": "tsc --watch --preserveWatchOutput --pretty",
     "dev": "npm run watch && cross-env NODE_ENV=development nodemon",
