@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@fastify/cors": "^8.2.0",
     "fastify": "^4.10.2"
   },
   "devDependencies": {
@@ -23,8 +24,8 @@
     "pino-pretty": "^8.1.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
-    "tsconfig-paths": "^4.1.1",
     "tsc-alias": "^1.6.7",
+    "tsconfig-paths": "^4.1.1",
     "typescript": "^4.9.4"
   }
 }

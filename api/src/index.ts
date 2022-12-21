@@ -1,5 +1,11 @@
+import cors from "@fastify/cors";
 import app from "./app";
 import config from "./config";
+
+app.register(cors, {
+  origin: config.validHost,
+  methods: ["POST", "GET"],
+});
 
 app.listen({ port: config.port, path: config.host });
 
