@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: "18.x"
 
+      - name: List Stuff
+        run: ls .
+
       - name: npm install, build, and test
         run: |
           npm install
@@ -53,8 +56,14 @@ jobs:
         with:
           name: node-app
 
+      - name: List Stuff
+        run: ls .
+
+      - name: List Stuff 2
+        run: cd .. && ls .
+
       - name: unzip artifact for deployment
-        run: unzip ./../release.zip
+        run: cd .. && unzip release.zip
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
