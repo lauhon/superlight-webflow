@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: "superlight-webflow-api"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6153B48CBC28441B90636A135A02EA90 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3178A6E187884A75BBE61E67B6726D43 }}
           package: .
