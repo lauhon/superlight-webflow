@@ -1,4 +1,5 @@
 import config from "../config";
+import logger from "../logger";
 import fetch from "../types/fetch";
 import { MailjetContact, MailjetError } from "../types/mailjet";
 
@@ -17,11 +18,18 @@ export const addContact = async (
 
   const [newContact] = result.Data as MailjetContact[];
 
+  logger.debug({ newContact }, "Successfully created Mailject contact");
+
   const listResponse = await addUserToList(newContact);
 
   if (!listResponse.ok) {
     return evaluateMailjetError((await listResponse.json()) as MailjetError);
   }
+
+  logger.debug(
+    { list: await listResponse.json() },
+    "Added Mailjet contact to list"
+  );
 
   return {
     status: 200,

@@ -1,14 +1,15 @@
 import cors from "@fastify/cors";
 import app from "./app";
 import config from "./config";
+import logger from "./logger";
 
 app.register(cors, {
-  origin: `https://${config.validHost}`,
+  origin: config.validHost,
   methods: ["POST", "GET"],
 });
 
 app.listen({ port: config.port, path: config.host });
 
-console.log(`🚀  Fastify server running on  ${config.host}:${config.port}`);
-console.log(`Route user: /api/v1/register`);
-console.log({ config });
+logger.info(`🚀  Fastify server running on  ${config.host}:${config.port}`);
+logger.info(`Route user: /api/v1/register`);
+logger.info({ config });

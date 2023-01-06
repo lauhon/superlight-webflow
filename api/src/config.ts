@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const config = {
-  validHost: process.env.VALID_HOST || "localhost:3000",
+  validHost: process.env.VALID_HOST || "http://localhost:3000",
   mailJetContactList: process.env.MAILJET_CONTACT_LIST || "",
   mailJetUser: process.env.MAILJET_USER || "",
   mailJetPassword: process.env.MAILJET_PASSWORD || "",
