@@ -1,3 +1,82 @@
+.w-checkbox {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.w-checkbox::before {
+  content: ' ';
+  display: table;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
+
+.w-checkbox::after {
+  content: ' ';
+  display: table;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  clear: both;
+}
+
+.w-checkbox-input {
+  float: left;
+  margin-bottom: 0px;
+  margin-left: -20px;
+  margin-right: 0px;
+  margin-top: 4px;
+  line-height: normal;
+}
+
+.w-checkbox-input--inputType-custom {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-color: #ccc;
+  border-bottom-color: #ccc;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  width: 12px;
+  height: 12px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+  background-color: #3898ec;
+  border-top-color: #3898ec;
+  border-bottom-color: #3898ec;
+  border-left-color: #3898ec;
+  border-right-color: #3898ec;
+  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+  box-shadow: 0px 0px 3px 1px #3898ec;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   color: #1a191e;
@@ -1189,6 +1268,7 @@ figcaption {
 
 .button.primary-inverted {
   min-width: 150px;
+  margin-left: auto;
   border-color: transparent;
   background-color: #fff;
   font-family: Manrope, sans-serif;
@@ -4362,7 +4442,7 @@ figcaption {
 }
 
 .text-field {
-  max-width: 30rem;
+  max-width: 40rem;
   margin-bottom: 0px;
   padding: 2rem 1.5rem;
   -webkit-align-self: stretch;
@@ -4392,10 +4472,7 @@ figcaption {
 }
 
 .form-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4603,6 +4680,18 @@ figcaption {
   font-size: 1.125rem;
   line-height: 160%;
   text-align: left;
+}
+
+.checkbox-field {
+  margin-top: 12px;
+  margin-left: 0px;
+}
+
+.div-block-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
@@ -6457,6 +6546,14 @@ figcaption {
     max-width: none;
   }
 
+  .navbar-inner {
+    background-color: #fff;
+  }
+
+  .navbar-inner.navbar-inner-black {
+    background-color: #000;
+  }
+
   .text-size-medium {
     text-align: left;
   }
@@ -6508,6 +6605,11 @@ figcaption {
 
   .label.w--current {
     display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    margin-top: 0px;
   }
 
   .home-hero-grid {
@@ -8871,17 +8973,6 @@ figcaption {
     grid-column-end: span 2;
   }
 
-  #w-node-f72c12e7-2d4a-826f-e492-33bab074d08d-b074d072 {
-    -ms-grid-column: span 2;
-    grid-column-start: span 2;
-    -ms-grid-column-span: 2;
-    grid-column-end: span 2;
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
-  }
-
   #w-node-ef0b50ca-6c22-7274-4665-1012b1aae75d-fb168081 {
     -ms-grid-column-span: 1;
     grid-column-end: 2;
@@ -8921,13 +9012,6 @@ figcaption {
   #w-node-f72c12e7-2d4a-826f-e492-33bab074d083-b074d072 {
     -ms-grid-column-align: center;
     justify-self: center;
-  }
-
-  #w-node-f72c12e7-2d4a-826f-e492-33bab074d08d-b074d072 {
-    -ms-grid-column: span 1;
-    grid-column-start: span 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
   }
 
   #w-node-ef0b50ca-6c22-7274-4665-1012b1aae75d-fb168081 {
