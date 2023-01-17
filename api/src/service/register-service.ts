@@ -39,7 +39,6 @@ export const addContact = async (
 
 const addUserToList = async (contact: MailjetContact) => {
   const response = await fetchFromMailjet(contactListEndpoint, {
-    IsUnsubscribed: "true",
     ContactID: contact.ID,
     ContactAlt: contact.Email,
     ListID: config.mailJetContactList,
