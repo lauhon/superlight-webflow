@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Superlight Webflow Project",
   "scripts": {
-    "web": "cd web/ && npx browser-sync start --server"
+    "web": "cd web/ && browser-sync start --server"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/lauhon/superlight-webflow/issues"
   },
-  "homepage": "https://github.com/lauhon/superlight-webflow#readme"
+  "homepage": "https://github.com/lauhon/superlight-webflow#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.11"
+  }
 }
