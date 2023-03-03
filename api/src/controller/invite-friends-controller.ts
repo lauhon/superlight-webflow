@@ -8,7 +8,7 @@ export default async function inviteFriendsController(
     "/",
     // { constraints: { host: config.validHost } },
     async function (_request: FastifyRequest, reply: FastifyReply) {
-      const { email } = _request.params as any;
+      const { email } = _request.query as any;
       const response = await getInvitationLink(email);
 
       return reply.status(response.status).send(response);
