@@ -276,7 +276,7 @@
                         id="wf-form-Early-Access-Form"
                         name="wf-form-Early-Access-Form"
                         data-name="Early Access Form"
-                        action="https://superlight-webflow-api.azurewebsites.net/api/v1/register"
+                        action="http://localhost:8080/api/v1/register"
                         method="post"
                         class="form-2"
                       >
@@ -289,19 +289,19 @@
                               type="email"
                               class="text-field text-field-medium w-input"
                               maxlength="256"
-                              name="Email-4"
-                              data-name="Email 4"
+                              name="Email"
+                              data-name="Email"
                               placeholder="E-Mail Adresse"
                               id="Email-4"
                               required=""
                             />
-                            <a
-                              href="#"
+                            <button
+                              type="submit"
                               class="button primary small early-access-only w-inline-block"
-                              >Early Access</a
+                              >Early Access</button
                             >
-                            <a
-                              href="earlyaccess.html"
+                            <button
+                              type="submit"
                               target="_blank"
                               aria-current="page"
                               class="link-block early-access-only w-inline-block w--current"
@@ -313,7 +313,7 @@
                                   </div>
                                 </div>
                               </div>
-                            </a>
+                            </button>
                           </div>
                           <label
                             id="w-node-_3650c149-febf-6b68-3719-4a19d596ac58-8b8d290f"
@@ -341,11 +341,11 @@
                         </div>
                       </form>
                       <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
+                        <div>Super! Wir haben dich auf die Warteliste gesetzt. 🎉</div>
                       </div>
                       <div class="w-form-fail">
                         <div>
-                          Oops! Something went wrong while submitting the form.
+                          Oops! Etwas lief schief. Vielleicht bist du schon auf der Warteliste?
                         </div>
                       </div>
                     </div>

@@ -1,11 +1,7 @@
 import config from "../config";
 import logger from "../logger";
 import fetch from "../types/fetch";
-import {
-  MailjetContact,
-  MailjetError,
-  MailjetSendRequest,
-} from "../types/mailjet";
+import { MailjetContact, MailjetError } from "../types/mailjet";
 
 export const addContact = async (
   email: string
@@ -35,6 +31,8 @@ export const addContact = async (
     "Added Mailjet contact to list"
   );
 
+  /*
+  // No need to send welcome mail, automatically sends it when adding user to list
   const sendMessageResponse = await sendWelcomeEmail(newContact);
 
   if (!sendMessageResponse.ok) {
@@ -46,7 +44,7 @@ export const addContact = async (
   logger.debug(
     { list: await sendMessageResponse.json() },
     "Sent Message to user"
-  );
+  );*/
 
   return {
     status: 200,
@@ -64,7 +62,8 @@ const addUserToList = async (contact: MailjetContact) => {
   return response;
 };
 
-const sendWelcomeEmail = async (contact: MailjetContact) => {
+//Currently not used - commented out
+/*const sendWelcomeEmail = async (contact: MailjetContact) => {
   const response = await fetchFromMailjetSendApi({
     Messages: [
       {
@@ -87,7 +86,7 @@ const sendWelcomeEmail = async (contact: MailjetContact) => {
   });
 
   return response;
-};
+};*/
 
 const evaluateMailjetError = (error: MailjetError): AddContactResponse => {
   logger.warn({ error }, "Error from Mailjet");
@@ -117,7 +116,7 @@ const createAuthBasic = () => {
 const contactApi = "https://api.mailjet.com/v3/REST";
 const contactEndpoint = "/contact ";
 const contactListEndpoint = "/listrecipient ";
-const sendApi = "https://api.mailjet.com/v3.1/send";
+//const sendApi = "https://api.mailjet.com/v3.1/send";
 
 export type AddContactResponse = {
   status: AddContactStatus;
@@ -137,6 +136,8 @@ const fetchFromMailjetContactApi = (endpoint: string, body: Object) => {
   });
 };
 
+//Currently not used
+/*
 const fetchFromMailjetSendApi = (body: MailjetSendRequest) => {
   return fetch(sendApi, {
     method: "POST",
@@ -147,3 +148,4 @@ const fetchFromMailjetSendApi = (body: MailjetSendRequest) => {
     body: JSON.stringify(body),
   });
 };
+*/
