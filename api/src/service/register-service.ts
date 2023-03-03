@@ -48,7 +48,7 @@ export const addContact = async (
 
   return {
     status: 200,
-    message: email,
+    message: newContact,
   };
 };
 
@@ -120,7 +120,7 @@ const contactListEndpoint = "/listrecipient ";
 
 export type AddContactResponse = {
   status: AddContactStatus;
-  message: string;
+  message: any;
 };
 
 export type AddContactStatus = 200 | 400 | 409 | 500;
