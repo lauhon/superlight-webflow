@@ -1,21 +1,22 @@
 {
-  "name": "superlight-webflow",
-  "version": "1.0.0",
-  "description": "Superlight Webflow Project",
+  "name": "superlight-website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "web": "cd web/ && browser-sync start --server"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lauhon/superlight-webflow.git"
-  },
-  "author": "Laurenz Honauer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lauhon/superlight-webflow/issues"
-  },
-  "homepage": "https://github.com/lauhon/superlight-webflow#readme",
   "dependencies": {
-    "browser-sync": "^2.27.11"
+    "@types/node": "18.14.6",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
   }
 }
