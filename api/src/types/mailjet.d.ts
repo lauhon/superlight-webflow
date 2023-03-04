@@ -39,3 +39,25 @@ export interface MailjetError {
   ErrorMessage: string;
   StatusCode: number;
 }
+
+export interface MailjetSendRequest {
+  Messages: MailjetMessage[];
+}
+
+export interface MailjetMessage {
+  From?: MailjetEmail;
+  To: MailjetEmail[];
+  Subject: string;
+  TextPart?: string;
+  HTMLPart?: string;
+  TemplateID?: number;
+  CustomCampaign?: string;
+  TemplateLanguage?: boolean;
+  DeduplicateCampaign?: boolean;
+  Variables: unknown;
+}
+
+export interface MailjetEmail {
+  Email: string;
+  Name: string;
+}
