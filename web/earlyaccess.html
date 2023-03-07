@@ -267,6 +267,7 @@
                   >
                     <div class="max-width-medium align-center"></div>
                   </div>
+                  <div style="display: none;" id="invitation-notice">Du wurdest eingeladen</div>
                   <div class="margin-bottom align-center">
                     <div
                       id="early-access-form"
@@ -366,12 +367,33 @@
     <script src="js/webflow.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
     <script>
+      window.addEventListener("load", (event) => {
+        //get query params
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+          get: (searchParams, prop) => searchParams.get(prop),
+        });
+        const value = params.invitation;
+
+        //invitation link used
+        if(value != null){
+          $('#invitation-notice').show()
+        }
+      });
+
       function getFormData($form) {
         var unindexed_array = $form.serializeArray();
         var indexed_array = {};
         $.map(unindexed_array, function (n, i) {
           indexed_array[n["name"]] = n["value"];
         });
+        
+        //get query params
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+          get: (searchParams, prop) => searchParams.get(prop),
+        });
+        const value = params.invitation;
+
+        indexed_array.invitedFrom=value
         return indexed_array;
       }
       var Webflow = Webflow || [];

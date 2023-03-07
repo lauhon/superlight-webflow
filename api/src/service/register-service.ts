@@ -2,16 +2,23 @@ import config from "../config";
 import logger from "../logger";
 import fetch from "../types/fetch";
 import { MailjetContact, MailjetError } from "../types/mailjet";
+import { acceptInvitation } from "./invite-friends-service";
 
 export const addContact = async (
-  email: string
+  email: string,
+  invitedFrom: string | null
 ): Promise<AddContactResponse> => {
+  //create new mailjet contact
   const response = await fetchFromMailjetContactApi(contactEndpoint, {
     email,
   });
 
   if (!response.ok) {
     return evaluateMailjetError((await response.json()) as MailjetError);
+  }
+  //add invitedFrom if it was a invitation link
+  if (invitedFrom != null) {
+    await acceptInvitation(email, invitedFrom);
   }
 
   const result = await response.json();

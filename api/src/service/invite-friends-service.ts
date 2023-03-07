@@ -4,6 +4,31 @@ import fetch from "../types/fetch";
 import { MailjetContact, MailjetError } from "../types/mailjet";
 import { addContact } from "./register-service";
 
+export const acceptInvitation = async (
+  email: string,
+  invitedFrom: string
+): Promise<GetContactResponse> => {
+  const response = await updateMailjetContactApi(contactdataEndpoint, email, {
+    data: [
+      {
+        Name: "invitedfrom",
+        Value: invitedFrom,
+      },
+    ],
+  });
+
+  if (!response.ok) {
+    return evaluateMailjetError((await response.json()) as MailjetError);
+  }
+
+  //const result = await response.json();
+
+  return {
+    status: 200,
+    message: "Invitation accepted.",
+  };
+};
+
 export const getInvitationLink = async (
   email: string
 ): Promise<GetContactResponse> => {
@@ -19,16 +44,18 @@ export const getInvitationLink = async (
 
     //Email not a mailjet contact, so create it
     if (mailJetError.status == 404) {
-      const newContactResponse = await addContact(email);
+      const newContactResponse = await addContact(email, null);
       const contact = newContactResponse.message as MailjetContact;
-      referralLink = "https://superlight.me/invite-a-friend/" + contact.ID;
+      referralLink =
+        "http://localhost:3000/earlyaccess.html?invitation=" + contact.ID;
     } else {
       return mailJetError;
     }
   } else {
     const result = await response.json();
     const [contact] = result.Data as MailjetContact[];
-    referralLink = "https://superlight.me/invite-a-friend/" + contact.ID;
+    referralLink =
+      "http://localhost:3000/earlyaccess.html?invitation=" + contact.ID;
   }
 
   return {
@@ -76,6 +103,7 @@ const createAuthBasic = () => {
 
 const contactApi = "https://api.mailjet.com/v3/REST";
 const contactEndpoint = "/contact/ ";
+const contactdataEndpoint = "/contactdata/";
 
 export type GetContactResponse = {
   status: GetContactStatus;
@@ -91,5 +119,21 @@ const getContactFromMailjetContactApi = (endpoint: string, email: string) => {
       "Content-Type": "application/json",
       Authorization: `${createAuthBasic()}`,
     },
+  });
+};
+
+const updateMailjetContactApi = (
+  endpoint: string,
+  email: string,
+  body: Object
+) => {
+  console.log(JSON.stringify(body));
+  return fetch(contactApi + endpoint + email, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${createAuthBasic()}`,
+    },
+    body: JSON.stringify(body),
   });
 };
