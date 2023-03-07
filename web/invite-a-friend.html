@@ -18,6 +18,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      href="css/invite-a-friend.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -257,43 +262,50 @@
                       id="early-access-form"
                       class="form-block padding-horizontal padding-xhuge w-form"
                     >
-                      <form
+                    <form
                         id="wf-form-Early-Access-Form"
                         name="wf-form-Early-Access-Form"
-                        data-name="Early Access Form"
-                        action="https://superlight-webflow-api.azurewebsites.net/api/v1/register"
+                        data-name="Invite Friend Form"
+                        action="http://localhost:8080/api/v1/referralLink"
                         method="post"
                         class="form-2"
                       >
                         <div class="div-block-4">
                           <div
-                            id="w-node-bcb5e8d3-7069-60d0-9df1-a4a81e1f2376-ea9ffa83"
-                            class="text-field-inline-button without-button"
+                            id="w-node-e2c78d5a-6b97-189d-f608-1f9cd74fd3e0-8b8d290f"
+                            class="text-field-inline-button"
                           >
                             <input
                               type="email"
                               class="text-field text-field-medium w-input"
                               maxlength="256"
-                              name="Email-4"
-                              data-name="Email 4"
+                              name="email"
+                              data-name="email"
                               placeholder="Deine E-Mail Adresse"
                               id="Email-4"
                               required=""
                             />
-                          </div>
-                          <a
-                            href="earlyaccess.html"
-                            target="_blank"
-                            class="link-block invite-friends-only w-inline-block"
-                          >
-                            <div class="button primary button-outer">
-                              <div class="button-inner">
-                                <div class="button-inner-text">
-                                  Jetzt Early Access anfordern
+                            <button
+                              type="submit"
+                              class="button primary small early-access-only w-inline-block"
+                              >Einladungslink anzeigen</button
+                            >
+                            <button
+                              type="submit"
+                              target="_blank"
+                              aria-current="page"
+                              class="link-block early-access-only w-inline-block w--current"
+                            >
+                              <div class="button primary button-outer">
+                                <div class="button-inner">
+                                  <div class="button-inner-text">
+                                    Einladungslink anzeigen
+                                  </div>
                                 </div>
                               </div>
-                            </div> </a
-                          ><label
+                            </button>
+                          </div>
+                          <label
                             id="w-node-bcb5e8d3-7069-60d0-9df1-a4a81e1f237f-ea9ffa83"
                             class="w-checkbox checkbox-field checkbox-margin-bottom"
                             ><input
@@ -322,19 +334,21 @@
                               >
                               Falls du noch nicht am Early Access teilnimmst,<br />wirst
                               du automatisch registriert.</span
-                            ></label
-                          >
+                            ></label>
                         </div>
                       </form>
                       <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
+                        <div id="referral-link">Dein persönlicher Einladungslink: </div>
+                        <div class="tooltip" style="cursor:pointer" width="15" height="15" onclick=copyToClipboard()>
+                          <span class="tooltiptext" id="tooltiptext">Einladungslink kopieren</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </div>
                       </div>
                       <div class="w-form-fail">
                         <div>
                           Oops! Something went wrong while submitting the form.
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -352,6 +366,16 @@
     <script src="js/webflow.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
     <script>
+      function copyToClipboard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("referral-link"));
+        window.getSelection().removeAllRanges(); // clear current selection
+        window.getSelection().addRange(range); // to select text
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+        $('#tooltiptext').html("Einladungslink kopiert")
+      }
+
       function getFormData($form) {
         var unindexed_array = $form.serializeArray();
         var indexed_array = {};
@@ -390,6 +414,7 @@
                 window.location = formRedirect;
                 return;
               }
+              $('#referral-link').html(res.message)
               $form
                 .hide() // optional hiding of form
                 .siblings(".w-form-done")
