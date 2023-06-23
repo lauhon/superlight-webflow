@@ -17,7 +17,7 @@
 }
 
 .w-checkbox::before {
-  content: ' ';
+  content: " ";
   display: table;
   -ms-grid-column-span: 1;
   grid-column-end: 2;
@@ -30,7 +30,7 @@
 }
 
 .w-checkbox::after {
-  content: ' ';
+  content: " ";
   display: table;
   -ms-grid-column-span: 1;
   grid-column-end: 2;
@@ -79,7 +79,7 @@
   border-bottom-color: #3898ec;
   border-left-color: #3898ec;
   border-right-color: #3898ec;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
+  background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,7 +90,9 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #1a191e;
   font-size: 1rem;
   line-height: 1.5;
@@ -99,7 +101,7 @@ body {
 h1 {
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 5rem;
   line-height: 110%;
@@ -121,7 +123,7 @@ h2 {
 h3 {
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 2.5rem;
   line-height: 120%;
@@ -132,7 +134,7 @@ h3 {
 h4 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 1.75rem;
   line-height: 130%;
@@ -143,7 +145,7 @@ h4 {
 h5 {
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 1.25rem;
   line-height: 130%;
@@ -154,7 +156,7 @@ h5 {
 h6 {
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 1.125rem;
   line-height: 120%;
@@ -292,7 +294,9 @@ figcaption {
 
 .text-size-large {
   display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #1a191e;
   font-size: 1.125rem;
   line-height: 160%;
@@ -308,7 +312,9 @@ figcaption {
 }
 
 .text-size-large.text-align-center {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #1a191e;
   font-weight: 500;
 }
@@ -350,7 +356,9 @@ figcaption {
 
 .text-align-center {
   display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   text-align: center;
 }
 
@@ -411,11 +419,15 @@ figcaption {
 }
 
 .text-size-small.inverse-text-color-muted {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .text-size-small.text-color-muted.compare-area {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .text-rich-text h1 {
@@ -465,11 +477,11 @@ figcaption {
   margin-bottom: 0px;
   padding: 3rem 0px 3rem 5rem;
   border-left: 0px none #000;
-  background-image: url('../images/icon-quote.svg');
+  background-image: url("../images/icon-quote.svg");
   background-position: 0px 49px;
   background-size: auto;
   background-repeat: no-repeat;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 2rem;
   line-height: 140%;
   font-weight: 500;
@@ -588,7 +600,7 @@ figcaption {
 }
 
 .form-label {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -677,7 +689,7 @@ figcaption {
 }
 
 .page-padding.business-example {
-  background-image: url('../images/Business-Example-Background.png');
+  background-image: url("../images/Business-Example-Background.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1204,13 +1216,17 @@ figcaption {
 }
 
 .text-size-medium {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 1.125rem;
   line-height: 160%;
 }
 
 .text-size-medium.text-color-muted {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .text-size-medium.text-color-muted.white {
@@ -1330,7 +1346,7 @@ figcaption {
 .background-color-primary {
   width: 36px;
   height: 36px;
-  background-color: #5bb5a2;
+  background-color: #000;
 }
 
 .background-color-primary.styleguide-flex {
@@ -1498,7 +1514,7 @@ figcaption {
   border-radius: 8px;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #1a191e;
   font-size: 1.125rem;
   font-weight: 500;
@@ -1521,10 +1537,6 @@ figcaption {
   border-radius: 10px;
   background-color: #000;
   color: #fff;
-}
-
-.button.primary:hover {
-  background-color: #6986f8;
 }
 
 .button.primary.clickdummy-button {
@@ -1660,12 +1672,8 @@ figcaption {
 
 .button.primary {
   border-color: transparent;
-  background-color: #5bb5a2;
+  background-color: #000;
   color: #fff;
-}
-
-.button.primary:hover {
-  background-color: #449e8b;
 }
 
 .heading-h6 {
@@ -1729,7 +1737,7 @@ figcaption {
 }
 
 .label.primary {
-  background-color: #5bb5a2;
+  background-color: #000;
   color: #fff;
 }
 
@@ -1753,7 +1761,9 @@ figcaption {
 
 .navbar-menu-text {
   display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #212432;
   font-size: 1rem;
 }
@@ -2200,7 +2210,9 @@ figcaption {
 }
 
 .text-size-xlarge {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #1a191e;
   font-size: 1.5rem;
   line-height: 160%;
@@ -2753,7 +2765,9 @@ figcaption {
 }
 
 .paragraph {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: rgba(26, 25, 30, 0.6);
 }
 
@@ -2877,7 +2891,9 @@ figcaption {
 }
 
 .footer-subnav-link {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #000;
   font-size: 0.8rem;
   text-decoration: none;
@@ -3440,7 +3456,7 @@ figcaption {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   border-left: 0px solid #000;
-  background-image: url('../images/icon-quote_1.svg');
+  background-image: url("../images/icon-quote_1.svg");
   background-position: 0px 59px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -3513,7 +3529,7 @@ figcaption {
   grid-template-rows: auto;
   border-radius: 10px;
   background-color: #6986f8;
-  background-image: url('../images/gradient-static.png');
+  background-image: url("../images/gradient-static.png");
   background-position: 50% 50%;
   background-size: cover;
   color: #fff;
@@ -4471,11 +4487,11 @@ figcaption {
   margin-bottom: 0px;
   padding: 3rem 0px 3rem 5rem;
   border-left: 1px none #000;
-  background-image: url('../images/icon-quote.svg');
+  background-image: url("../images/icon-quote.svg");
   background-position: 0% 49px;
   background-size: auto;
   background-repeat: no-repeat;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 2rem;
   line-height: 140%;
   font-weight: 500;
@@ -4574,7 +4590,7 @@ figcaption {
 }
 
 .heading-4 {
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .heading-5 {
@@ -4724,7 +4740,13 @@ figcaption {
 }
 
 .section-home-security {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(#000)
+  );
   background-image: linear-gradient(180deg, #000, #000);
 }
 
@@ -4840,7 +4862,7 @@ figcaption {
 
 .home-security-grid-right-top.padding-medium {
   width: 66%;
-  background-image: url('../images/Security-Image-1.png');
+  background-image: url("../images/Security-Image-1.png");
   background-position: 0px 0px;
   background-size: contain;
   background-attachment: scroll;
@@ -4856,7 +4878,9 @@ figcaption {
 }
 
 .text-size-security-white {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #fff;
   font-size: 1rem;
   line-height: 165%;
@@ -4865,7 +4889,9 @@ figcaption {
 
 .heading-h3-security-white {
   position: static;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #fff;
   font-size: 3rem;
   line-height: 165%;
@@ -4961,7 +4987,7 @@ figcaption {
   grid-template-columns: 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  background-image: url('../images/Security-Image-2.png');
+  background-image: url("../images/Security-Image-2.png");
   background-position: 0px 0px;
   background-size: contain;
   background-clip: border-box;
@@ -5166,7 +5192,9 @@ figcaption {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
   text-align: left;
@@ -5336,7 +5364,9 @@ figcaption {
 }
 
 .text-size-xlarge-white.text-align-center {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   font-weight: 500;
   letter-spacing: 0.25px;
 }
@@ -5492,7 +5522,9 @@ figcaption {
 
 .text-size-large-centered {
   display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #1a191e;
   font-size: 1.125rem;
   line-height: 160%;
@@ -5899,7 +5931,9 @@ figcaption {
 }
 
 .button-text-text-2.banner {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 400;
@@ -5997,7 +6031,9 @@ figcaption {
 }
 
 .text-size-medium-2.inverse-text-color-muted {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .heading-h6-2 {
@@ -6047,7 +6083,7 @@ figcaption {
   grid-template-rows: auto;
   border-radius: 10px;
   background-color: #2b79ff;
-  background-image: url('../images/gradient-static.png');
+  background-image: url("../images/gradient-static.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: repeat;
@@ -6494,8 +6530,8 @@ figcaption {
   border-color: #7549b4;
   border-radius: 0.8em;
   background-color: #fff;
-  -webkit-transition: all 300ms cubic-bezier(.645, .045, .355, 1);
-  transition: all 300ms cubic-bezier(.645, .045, .355, 1);
+  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -6569,8 +6605,9 @@ figcaption {
   margin-right: 1em;
   margin-bottom: auto;
   background-color: #7549b4;
-  -webkit-transition: background-color 300ms cubic-bezier(.645, .045, .355, 1);
-  transition: background-color 300ms cubic-bezier(.645, .045, .355, 1);
+  -webkit-transition: background-color 300ms
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .slider {
@@ -6999,7 +7036,9 @@ figcaption {
 }
 
 .text-block-13 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: rgba(26, 25, 30, 0.5);
   font-size: 0.75rem;
   text-align: left;
@@ -7136,7 +7175,9 @@ figcaption {
 }
 
 .text-size-medium-2-copy.inverse-text-color-muted {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: rgba(26, 25, 30, 0.5);
 }
 
@@ -7322,7 +7363,7 @@ figcaption {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   background-color: #6986f8;
-  background-image: url('../images/Header_Banner.png');
+  background-image: url("../images/Header_Banner.png");
   background-position: 100% 50%;
   background-size: cover;
 }
@@ -7370,7 +7411,9 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .text-block-18 {
@@ -7733,7 +7776,9 @@ figcaption {
   -webkit-transform: translate(0px, -15px);
   -ms-transform: translate(0px, -15px);
   transform: translate(0px, -15px);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .body-2 {
@@ -8018,7 +8063,7 @@ figcaption {
 
 .section-map-search {
   height: 60vh;
-  background-image: url('../images/Map-Large.png');
+  background-image: url("../images/Map-Large.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -8036,7 +8081,9 @@ figcaption {
 }
 
 .text-block-19 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.75rem;
 }
@@ -8116,7 +8163,7 @@ figcaption {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  background-image: url('../images/DE.png');
+  background-image: url("../images/DE.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -8125,7 +8172,7 @@ figcaption {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  background-image: url('../images/EN.png');
+  background-image: url("../images/EN.png");
   background-position: 50% 50%;
   background-size: cover;
   opacity: 0.35;
@@ -8206,18 +8253,18 @@ figcaption {
 }
 
 .text-block-20 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 .business-example-2-top-icon {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #fff;
   line-height: 1;
 }
 
 .business-example-2-top-icon-text {
   margin-left: 8px;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   line-height: 1;
 }
 
@@ -8365,7 +8412,7 @@ figcaption {
   border-color: #1b1b1a;
   border-radius: 22px 22px 0px 0px;
   background-color: #fcfaf6;
-  background-image: url('../images/Business-Example-3.png');
+  background-image: url("../images/Business-Example-3.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -9906,7 +9953,9 @@ figcaption {
   }
 
   .mobile-menu-nav-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     font-size: 1rem;
     font-weight: 500;
   }
@@ -14243,22 +14292,22 @@ figcaption {
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('../fonts/DMSans-Medium.ttf') format('truetype');
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Medium.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Regular.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

@@ -3,7 +3,7 @@
 <html
   data-wf-page="63bff2bedb59c142413bfe36"
   data-wf-site="63bff2bedb59c106e23bfe31"
-  lang="de"
+  lang="en"
 >
   <head>
     <meta charset="utf-8" />
@@ -86,18 +86,18 @@
                   </div>
                   <div class="margin-bottom margin-small">
                     <div class="text-size-large">
-                      Für diese Seite brauchen wir noch eine Idee
+                      For this page we have no idea what you are looking for.
                     </div>
                   </div>
                   <div class="margin-bottom margin-large">
                     <a
-                      href="earlyaccess.html"
+                      href="support.html"
                       target="_blank"
                       class="button-text w-inline-block"
                     >
                       <div class="button-text-wrapper">
                         <div class="button-text-text-2">
-                          Teile uns deine Idee
+                          Tell us what you are looking for
                         </div>
                         <div class="button-text-icon-wrapper">
                           <div class="button-text-icon w-embed">
@@ -123,7 +123,7 @@
                     class="button primary small w-inline-block"
                   >
                     <div class="button-inner">
-                      <div class="button-inner-text">Zurück zum Start</div>
+                      <div class="button-inner-text">To the homepage</div>
                     </div>
                   </a>
                 </div>
@@ -141,65 +141,5 @@
     ></script>
     <script src="js/webflow.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-    <script>
-      function getFormData($form) {
-        var unindexed_array = $form.serializeArray();
-        var indexed_array = {};
-        $.map(unindexed_array, function (n, i) {
-          indexed_array[n["name"]] = n["value"];
-        });
-        return indexed_array;
-      }
-      var Webflow = Webflow || [];
-      Webflow.push(function () {
-        // unbind webflow form handling (keep this if you only want to affect specific forms)
-        $(document).off("submit");
-        /* Any form on the page */
-        $("form").submit(function (e) {
-          e.preventDefault();
-          const $form = $(this); // The submitted form
-          const $submit = $("[type=submit]", $form); // Submit button of form
-          const buttonText = $submit.val(); // Original button text
-          const buttonWaitingText = $submit.attr("data-wait"); // Waiting button text value
-          const formMethod = $form.attr("method"); // Form method (where it submits to)
-          const formAction = $form.attr("action"); // Form action (GET/POST)
-          const formRedirect = $form.attr("data-redirect"); // Form redirect location
-          const formData = getFormData($form); // Form data
-          // Set waiting text
-          if (buttonWaitingText) {
-            $submit.val(buttonWaitingText);
-          }
-          $.ajax(formAction, {
-            data: JSON.stringify(formData),
-            method: formMethod,
-            contentType: "application/json",
-          })
-            .done((res) => {
-              // If form redirect setting set, then use this and prevent any other actions
-              if (formRedirect) {
-                window.location = formRedirect;
-                return;
-              }
-              $form
-                .hide() // optional hiding of form
-                .siblings(".w-form-done")
-                .show() // Show success
-                .siblings(".w-form-fail")
-                .hide(); // Hide failure
-            })
-            .fail((res) => {
-              $form
-                .siblings(".w-form-done")
-                .hide() // Hide success
-                .siblings(".w-form-fail")
-                .show(); // show failure
-            })
-            .always(() => {
-              // Reset text
-              $submit.val(buttonText);
-            });
-        });
-      });
-    </script>
   </body>
 </html>
