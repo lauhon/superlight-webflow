@@ -6,9 +6,9 @@ export default async function registerController(fastify: FastifyInstance) {
     "/",
     // { constraints: { host: config.validHost } },
     async function (_request: FastifyRequest, reply: FastifyReply) {
-      const { Email } = _request.body as any;
+      const { Email: email } = _request.body as any;
 
-      const response = await addContact(Email);
+      const response = await addContact(email);
 
       return reply.status(response.status).send(response);
     }
