@@ -1,12 +1,16 @@
 import config from "../config";
 import logger from "../logger";
 import fetch from "../types/fetch";
-import { MailjetContact, MailjetError } from "../types/mailjet";
+import {
+  MailjetContact,
+  MailjetError,
+  MailjetSendRequest,
+} from "../types/mailjet";
 
 export const addContact = async (
   email: string
 ): Promise<AddContactResponse> => {
-  const response = await fetchFromMailjet(contactEndpoint, {
+  const response = await fetchFromMailjetContactApi(contactEndpoint, {
     email,
   });
 
@@ -31,6 +35,19 @@ export const addContact = async (
     "Added Mailjet contact to list"
   );
 
+  const sendMessageResponse = await sendWelcomeEmail(newContact);
+
+  if (!sendMessageResponse.ok) {
+    return evaluateMailjetError(
+      (await sendMessageResponse.json()) as MailjetError
+    );
+  }
+
+  logger.debug(
+    { list: await sendMessageResponse.json() },
+    "Sent Message to user"
+  );
+
   return {
     status: 200,
     message: email,
@@ -38,7 +55,7 @@ export const addContact = async (
 };
 
 const addUserToList = async (contact: MailjetContact) => {
-  const response = await fetchFromMailjet(contactListEndpoint, {
+  const response = await fetchFromMailjetContactApi(contactListEndpoint, {
     ContactID: contact.ID,
     ContactAlt: contact.Email,
     ListID: config.mailJetContactList,
@@ -47,7 +64,34 @@ const addUserToList = async (contact: MailjetContact) => {
   return response;
 };
 
+const sendWelcomeEmail = async (contact: MailjetContact) => {
+  const response = await fetchFromMailjetSendApi({
+    Messages: [
+      {
+        From: {
+          Name: "Superlight",
+          Email: "info@superlight.me",
+        },
+        To: [
+          {
+            Email: contact.Email,
+            Name: contact.Name,
+          },
+        ],
+        TemplateID: config.mailJetWelcomeTemlate,
+        TemplateLanguage: true,
+        Subject: "Willkommen bei Superlight",
+        Variables: {},
+      },
+    ],
+  });
+
+  return response;
+};
+
 const evaluateMailjetError = (error: MailjetError): AddContactResponse => {
+  logger.warn({ error }, "Error from Mailjet");
+
   if (error.ErrorMessage.includes("MJ18 A Contact resource with value ")) {
     return {
       status: 409,
@@ -70,9 +114,10 @@ const createAuthBasic = () => {
   );
 };
 
-const mailApi = "https://api.mailjet.com/v3/REST";
+const contactApi = "https://api.mailjet.com/v3/REST";
 const contactEndpoint = "/contact ";
 const contactListEndpoint = "/listrecipient ";
+const sendApi = "https://api.mailjet.com/v3.1/send";
 
 export type AddContactResponse = {
   status: AddContactStatus;
@@ -81,8 +126,19 @@ export type AddContactResponse = {
 
 export type AddContactStatus = 200 | 400 | 409 | 500;
 
-const fetchFromMailjet = (endpoint: string, body: Object) => {
-  return fetch(mailApi + endpoint, {
+const fetchFromMailjetContactApi = (endpoint: string, body: Object) => {
+  return fetch(contactApi + endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${createAuthBasic()}`,
+    },
+    body: JSON.stringify(body),
+  });
+};
+
+const fetchFromMailjetSendApi = (body: MailjetSendRequest) => {
+  return fetch(sendApi, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
